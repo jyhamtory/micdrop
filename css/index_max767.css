@@ -15,7 +15,7 @@
     margin: 0 auto;
   }
 
-  #slider>#slider_box {
+  #slider #slider_box {
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -23,19 +23,19 @@
     position: relative;
   }
 
-  #slider_box>.slider_img {
+  #slider_box .slider_img {
     width: 100%;
     height: 100%;
     margin: 0 auto;
   }
 
-  #slider_box>.slider_img>img {
+  #slider_box .slider_img img {
     width: 100%;
     height: 110%;
     position: relative;
   }
 
-  #slider_box>.slider_text {
+  #slider_box .slider_text {
     width: 100%;
     height: 45%;
     position: absolute;
@@ -44,7 +44,7 @@
     font-family: 'Syne', sans-serif;
   }
 
-  #slider_box>.slider_text>h3 {
+  #slider_box .slider_text h3 {
     font-size: 50px;
     margin-top: 50px;
     font-weight: 800;
@@ -54,7 +54,7 @@
   /*배경 채워지는 버튼*/
   .fill_btn {
     display: inline-block;
-    border: 2px solid #1e2646;
+    border: 2px solid #000;
   }
 
   .fill {
@@ -67,28 +67,23 @@
     transition: 0.4s ease-in-out;
   }
 
-  #slider_box>.slider_text>.fill_btn {
+  #slider_box .fill_btn {
+    border:2px solid #1e2646;
     position: relative;
     top: 50px;
   }
 
-  #slider_box>.slider_text>.fill_btn>.fill {
+  #slider_box .fill_btn .fill {
     color: #1e2646;
   }
 
-  #albums>.fill_btn {
-    position: absolute;
-    top: 95px;
-    right: 0;
-  }
-
-  #slider_box>.slider_text>.fill_btn>.fill:hover {
+  #slider_box .fill_btn .fill:hover {
     background-color: #1e2646;
     color: #fff;
   }
 
   /*슬라이더 버튼*/
-  #slider_box>.side_left {
+  #slider_box .side_left {
     width: 15%;
     height: 100%;
     position: absolute;
@@ -100,18 +95,18 @@
     transition: 0.3s ease-in-out;
   }
 
-  #slider_box>.side_left:hover {
+  #slider_box .side_left:hover {
     cursor: pointer;
     opacity: 1;
   }
 
-  #slider_box>.side_left>img {
+  #slider_box .side_left img {
     width: 40px;
     height: 50px;
     padding:0 0 30% 10%;
   }
 
-  #slider_box>.side_right {
+  #slider_box .side_right {
     width: 15%;
     height: 100%;
     position: absolute;
@@ -124,12 +119,12 @@
     transition: 0.3s ease-in-out;
   }
 
-  #slider_box>.side_right:hover {
+  #slider_box .side_right:hover {
     cursor: pointer;
     opacity: 1;
   }
 
-  #slider_box>.side_right>img {
+  #slider_box .side_right img {
     width: 40px;
     height: 50px;
     padding:0 10% 30% 0;
@@ -157,7 +152,7 @@
     display: inline-block;
   }
 
-  #music_player>#music_player_box {
+  #music_player #music_player_box {
     width: 90%;
     height: 100%;
     margin: 0 auto;
@@ -165,11 +160,11 @@
     justify-content: space-between;
   }
 
-  #music_player_box>.album_img {
+  #music_player_box .album_img {
     display:none;
   }
 
-  #music_player_box>.player {
+  #music_player_box .player {
     width: 100%;
     height: 100%;
     position:relative;
@@ -180,28 +175,28 @@
     box-sizing: border-box;
   }
 
-  #music_player_box>.player>.album_name {
+  #music_player_box .album_name {
     font-size: 20px;
     text-transform: uppercase;
     margin: 5px 0 0 2%;
   }
 
   /*뮤직 플레이어 아이콘*/
-  .player>.player_icon_box {
+  .player .player_icon_box {
     width: 100%;
     height: 40px;
     justify-content: flex-end;
   }
 
-  .player_icon_box>.music_bar {
+  .player_icon_box .music_bar {
     display:none;
   }
 
-  .player_icon_box>.music_bar>.music_bar_value {
+  .player_icon_box .music_bar .music_bar_value {
     display:none;
   }
 
-  .player_icon_box>.player_icon {
+  .player_icon_box .player_icon {
     width: 20%;
     min-width: 120px;
     height: 100%;
@@ -212,46 +207,46 @@
     bottom:60%;
   }
 
-  .player_icon_box>.player_icon>li>img {
+  .player_icon_box .player_icon img {
     width: 20px;
     height: 20px;
   }
 
-  .player_icon_box>.player_icon>li>img:hover {
+  .player_icon_box .player_icon img:hover {
     cursor: pointer;
   }
 
-  .player_icon_box>.player_icon>li>.play {
+  .player_icon_box .player_icon .play {
     width: 30px;
     height: 30px;
   }
 
-  .player_icon_box>.player_icon>li>.stop {
+  .player_icon_box .player_icon .stop {
     width: 30px;
     height: 30px;
     display: none;
   }
 
   /*뮤직 플레이어 볼륨*/
-  .player_icon_box>.volumn_box {
+  .player_icon_box .volumn_box {
     display:none;
   }
 
 
   /*노래 이름 & 시간*/
-  #music_player_box>.player>.player_bottom {
+  #music_player_box .player .player_bottom {
     width:100%;
     height:auto;
     display:flex;
     justify-content: space-between;
   }
 
-  #music_player_box>.player>.player_bottom>.song_name {
+  .player_bottom .song_name {
     font-size: 16px;
     margin: 0 0 0 2%;
   }
 
-  #music_player_box>.player>.player_bottom>.song_time {
+  .player_bottom .song_time {
     margin:0 1% 0 0;
   }
 
@@ -278,11 +273,11 @@
     position: relative;
   }
 
-  #albums>.fill_btn {
+  #albums .fill_btn {
     display:none;}
 
   /*앨범 박스*/
-  #albums>.album_wrap {
+  #albums .album_wrap {
     width:100%;
     height:100%;
     margin-top: 50px;
@@ -291,31 +286,29 @@
     align-items: center;
   }
 
-  #albums>.album_wrap>.album_box {
+  #albums .album_wrap .album_box {
     width: 80%;
     height: auto;
     margin: 0 0px 50px 0;
     box-sizing: border-box;
-    background-color: #2c8ce0;
   }
 
-  #albums>.album_wrap>.album_box:nth-of-type(3n+2) {
+  #albums .album_wrap .album_box:nth-of-type(3n+2) {
     position: relative;
     bottom: 0px;
   }
 
   /*앨범 이미지*/
 
-  .album_box>.album_img_box {
+  .album_box .album_img_box {
     width: 100%;
     height: 0;
     padding-top: 100%;
     position: relative;
     overflow: hidden;
-    background-color: #23a6d5;
   }
 
-  .album_box>.album_img_box>img {
+  .album_box .album_img_box img {
     position:absolute;
     top:0;
     left:0;
@@ -323,7 +316,7 @@
     height: 100%;
   }
 
-  .album_box>.album_img_box>.img_v {
+  .album_box .album_img_box .img_v {
     position:absolute;
     top:-15%;
     left:0;
@@ -332,7 +325,7 @@
   }
 
   /*이펙트*/
-  .album_box>.album_img_box>.hover_box {
+  .album_box .album_img_box .hover_box {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -349,12 +342,12 @@
     mix-blend-mode: lighten;
   }
 
-  .album_box>.album_img_box:hover>.hover_box {
+  .album_box .album_img_box:hover .hover_box {
     opacity: 1;
     cursor: pointer;
   }
 
-  .album_box>.album_img_box>a {
+  .album_box .album_img_box a {
     position: absolute;
     top: 0;
     left: 0;
@@ -376,31 +369,31 @@
     }
   }
 
-  .album_box>.album_title {
+  .album_box .album_title {
     font-size: 20px;
     font-weight: 800;
     text-transform: uppercase;
     padding: 20px 0 7px 0;
   }
 
-  .album_box>.album_title>a {
+  .album_box .album_title a {
     text-decoration: none;
     color: #000;
     transition: 0.5s;
   }
 
-  .album_box>.album_title>a:hover {
+  .album_box .album_title a:hover {
     color: #263574;
   }
 
-  .album_box>.stream_box {
+  .album_box .stream_box {
     width: 100%;
     height: 30px;
     display: flex;
     justify-content: space-between;
   }
 
-  .album_box>.stream_box>.stream_on {
+  .album_box .stream_box .stream_on {
     font-size: 16px;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
@@ -409,27 +402,27 @@
   }
 
   /*sream on 아이콘*/
-  .stream_box>.stream_icon_box {
+  .stream_box .stream_icon_box {
     width: 72%;
     height: 18px;
     display: flex;
     
   }
 
-  .stream_box>.stream_icon_box>a {
+  .stream_box .stream_icon_box a {
     text-decoration: none;
     display: flex;
     align-items: center;
   }
 
-  .stream_box>.stream_icon_box>a>img {
+  .stream_box .stream_icon_box img {
     width: 15px;
     height: 14px;
     margin-right: 22px;
     transition: all 0.3s ease-out;
   }
 
-  .stream_box>.stream_icon_box>a>img:hover {
+  .stream_box .stream_icon_box img:hover {
     transform: scale(1.2);
   }
 
@@ -446,7 +439,7 @@
     background-attachment: fixed;
   }
 
-  #new_album>#new_album_box {
+  #new_album #new_album_box {
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -459,30 +452,29 @@
 
   /*NEW ALBUM 레코드 이미지*/
 
-  #new_album_box>#record {
+  #new_album_box #record {
     width: 360px;
     height: 45%;
     position: relative;
   }
 
-  #record>.record_cover_box {
+  #record .record_cover_box {
     width: 80%;
     height: 80%;
     position: absolute;
     top: 50px;
     overflow: hidden;
-    background-color: plum;
     z-index: 3;
   }
 
-  #record>.record_cover_box>.record_cover_img {
+  #record .record_cover_box .record_cover_img {
     width: 100%;
     height: 150%;
     position: relative;
     bottom: 80px;
   }
 
-  #record>.record_box {
+  #record .record_box {
     width: 80%;
     height: 80%;
     position: absolute;
@@ -491,7 +483,7 @@
     z-index: 2;
   }
 
-  #record>.record_box>.record_img {
+  #record .record_box .record_img {
     width: 100%;
     height: 100%;
     position: relative;
@@ -500,7 +492,7 @@
     transition: 0.5s;
   }
 
-  #record>.record_box>.record_img:hover {
+  #record .record_box .record_img:hover {
     margin-left: 30px;
   }
 
@@ -511,7 +503,7 @@
   }
 
   /*New Album 텍스트*/
-  #new_album_box>#new_album_text {
+  #new_album_box #new_album_text {
     width: 100%;
     height: 50%;
     display: flex;
@@ -520,19 +512,19 @@
     justify-content: space-evenly;
   }
 
-  #new_album_box>#new_album_text>.title {
+  #new_album_text .title {
     font-size: 40px;
     border-bottom: none;
     padding-top: 0;
   }
 
-  #new_album_box>#new_album_text>p {
+  #new_album_text p {
     font-size: 16px;
     position: relative;
     bottom: 0px;
   }
 
-  #new_album_box>#new_album_text>.btn_box {
+  #new_album_text .btn_box {
     width: 45%;
     min-width: 330px;
     height: 40%;
@@ -542,21 +534,21 @@
     align-content: space-around;
   }
 
-  #new_album_box>#new_album_text>.btn_box>.fill_btn>.fill {
+  #new_album_text .fill_btn .fill {
     padding: 15px 20px;
   }
 
-  #new_album_box>#new_album_text>.btn_box>.fill_btn>.fill:hover {
+  #new_album_text .fill_btn .fill:hover {
     background-color: #000;
     color: #fff;
   }
 
-  #new_album_box>#new_album_text>.btn_box>.fill_btn>.buy {
+  #new_album_text .fill_btn .buy {
     background-color: #000;
     color: #fff;
   }
 
-  #new_album_box>#new_album_text>.btn_box>.fill_btn>.buy:hover {
+  #new_album_text .fill_btn .buy:hover {
     background: none;
     color: #000;
   }
@@ -570,14 +562,14 @@
     position: relative;
   }
 
-  #news>#news_wrap {
+  #news #news_wrap {
     width: 100%;
     height: auto;
     margin: 0 auto;
   }
 
   /*뉴스 박스*/
-  #news>#news_wrap>.news_box {
+  #news #news_wrap .news_box {
     width: 100%;
     height: auto;
     box-sizing: border-box;
@@ -587,7 +579,7 @@
     margin-top: 50px;
   }
 
-  .news_box>.news_text {
+  .news_box .news_text {
     width: 100%;
     height: auto;
     padding-bottom: 20px;
@@ -596,31 +588,31 @@
     justify-content: center;
   }
 
-  .news_box>.news_text>.news_tag {
+  .news_box .news_text .news_tag {
     padding-bottom: 10px;
   }
 
-  .news_box>.news_text>.news_title {
+  .news_box .news_text .news_title {
     font-weight: 800;
     font-size: 36px;
     text-transform: uppercase;
     padding-bottom: 30px;
   }
 
-  .news_box>.news_text>.news_content {
+  .news_box .news_text .news_content {
     font-size: 17px;
     font-family: 'Montserrat', sans-serif;
     line-height: 26px;
   }
 
-  .news_box>.news_imgbox {
+  .news_box .news_imgbox {
     width: 100%;
     height:410px;
     overflow: hidden;
     position: relative;
   }
 
-  .news_box>.news_imgbox>a>.news_img {
+  .news_box .news_imgbox .news_img {
     width: 100%;
     height: auto;
     position: absolute;
@@ -629,13 +621,13 @@
     transition: 0.5s;
   }
 
-  .news_box>.news_imgbox:hover>a>.news_img {
+  .news_box .news_imgbox:hover .news_img {
     filter: grayscale(100%);
   }
 
 
   /*뉴스 박스_리버스*/
-  #news>#news_wrap>.reverse {
+  #news #news_wrap .reverse {
     width: 100%;
     height: auto;
     box-sizing: border-box;
@@ -645,19 +637,19 @@
     margin-top: 50px;
   }
 
-  .reverse>.news_imgbox>a>.news_img {
+  .reverse .news_imgbox .news_img {
     width: 100%;
     height: auto;
     overflow: hidden;
   }
 
 
-  .reverse>.news_text>.fill_btn {
+  .reverse .news_text .fill_btn {
     width: 165px;
     margin-top: 30px;
   }
 
-  .reverse>.news_text>.fill_btn>.fill:hover {
+  .reverse .news_text .fill_btn .fill:hover {
     background: #000;
     color: white;
   }
@@ -671,7 +663,7 @@
     margin: 0 auto;
   }
 
-  #gallery>#gallery_wrap {
+  #gallery #gallery_wrap {
     width: 100%;
     height: auto;
     margin-top: 150px;
@@ -679,18 +671,18 @@
     flex-flow: column wrap;
   }
 
-  #gallery_wrap>.video_box {
+  #gallery_wrap .video_box {
     width: 100%;
     overflow: hidden;
     display: flex;
   }
 
-  #gallery_wrap>.video_box>video {
+  #gallery_wrap .video_box video {
     width: 100%;
     height: 100%;
   }
 
-  #gallery_wrap>.imgbox {
+  #gallery_wrap .imgbox {
     width: 100%;
     height: 0;
     padding-bottom: 100%;
@@ -699,31 +691,31 @@
     overflow: hidden;
   }
 
-  #gallery_wrap>.imgbox>img {
+  #gallery_wrap .imgbox img {
     position: absolute;
     top: 0;
     left: 0;
     transition: 0.5s;
   }
 
-  #gallery_wrap>.imgbox:hover>img {
+  #gallery_wrap .imgbox:hover img {
     filter: grayscale(100%);
     transform: scale(1.1);
   }
 
-  #gallery_wrap>.imgbox>.img_h {
+  #gallery_wrap .imgbox .img_h {
     width: 125%;
     height: 100%;
     object-fit: cover;
   }
 
-  #gallery_wrap>.imgbox>.img_v {
+  #gallery_wrap .imgbox .img_v {
     width: 100%;
     height: 110%;
     object-fit: cover;
   }
 
-  #gallery_wrap>.imgbox>.hover_box {
+  #gallery_wrap .imgbox .hover_box {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -733,11 +725,11 @@
     transition: opacity 0.8s
   }
 
-  #gallery_wrap>.imgbox:hover>.hover_box {
+  #gallery_wrap .imgbox:hover .hover_box {
     opacity: 1;
   }
 
-  #gallery_wrap>.imgbox>.hover_box a {
+  #gallery_wrap .imgbox .hover_box a {
     width: 100%;
     height: 100%;
     display: flex;
@@ -745,7 +737,7 @@
     align-items: center;
   }
 
-  #gallery_wrap>.imgbox>.hover_box img {
+  #gallery_wrap .imgbox .hover_box img {
     width: 40px;
     height: 40px;
   }
@@ -758,7 +750,7 @@
     margin: 0 auto;
   }
 
-  #tour>#tour_wrap {
+  #tour #tour_wrap {
     width: 100%;
     height: auto;
     margin: 0 auto;

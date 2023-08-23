@@ -18,48 +18,50 @@
     align-items: center;
   }
 
-  #header_box>#logo_box>a {
+  /*로고박스*/
+  #header_box #logo_box a {
     display:block;
     width: 117px;
     height: 25px;
   }
 
-  #header_box>#logo_box>a>img {
+  #header_box #logo_box img {
     width: 100%;
     height: 100%;
   }
 
-  #header_box>#logo_box>.menu_icon {
+  #header_box #logo_box .menu_icon {
     display: none;
   }
 
-  #header_box>#logo_box>.close_icon {
+  #header_box #logo_box .close_icon {
     display:none;
   }
 
-  #header_box>nav {
+  /*네비게이션*/
+  #header_box nav {
     width: 300px;
     height: 50px;
   }
 
-  #header_box>nav>ul {
+  nav ul {
     display: flex;
     justify-content: space-between;
     font-family: 'Syne', sans-serif;
     font-weight: 600;
   }
 
-  #header_box>nav>ul>li {
+  nav li {
     line-height: 50px;
   }
 
-  #header_box>nav>ul>li>a {
+  nav a {
     position: relative;
     text-decoration: none;
     color: #333;
   }
 
-  #header_box>nav>ul>li>a::after {
+  nav a::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -73,21 +75,21 @@
     transform-origin: right;
   }
 
-  #header_box>nav>ul>li>a:hover::after {
+  nav li:hover a::after {
     transform: scaleX(1);
     transform-origin: left;
   }
 
-  #header_box>nav #now {
+  nav #now {
     border-bottom: 2px solid #333;
     padding-bottom: 3px;
     cursor: default;
   }
 
-  #header_box>nav #now:hover::after {
+  /*현재 페이지는 hover를 해도 줄이 생기지 않게!*/
+  nav #now:hover::after {
     transform: scaleX(0);
   }
-
 
   /*푸터*/
   footer {
@@ -97,13 +99,13 @@
     border-top: 1px solid #000;
   }
 
-  footer>#footer_wrap {
+  footer #footer_wrap {
     width: 100%;
     height: 200px;
     margin: 0 auto;
   }
 
-  #footer_wrap>#footer_menu {
+  #footer_wrap #footer_menu {
     width: 100%;
     height: 100%;
     display: flex;
@@ -112,12 +114,12 @@
     align-content: space-evenly;
   }
 
-  #footer_wrap>#footer_menu li {
+  #footer_wrap #footer_menu li {
     width:40%;
     text-align: center;
   }
 
-  #footer_wrap>#footer_menu a {
+  #footer_wrap #footer_menu a {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: 20px;
@@ -127,7 +129,7 @@
     position: relative;
   }
 
-  #footer_wrap>#footer_menu a::before {
+  #footer_wrap #footer_menu a::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -140,12 +142,12 @@
     transform-origin: right;
   }
 
-  #footer_wrap>#footer_menu a:hover::before {
+  #footer_wrap #footer_menu a:hover::before {
     transform: scaleX(1);
     transform-origin: left;
   }
 
-  #footer_wrap>#footer_menu img {
+  #footer_wrap #footer_menu img {
     width: 18px;
     height: 18px;
     vertical-align: center;

@@ -251,6 +251,7 @@
     left:0;
   }
 
+    /*hover 효과*/
   .img_box .hover {
     display:block;
     width:100%;
@@ -455,6 +456,7 @@
     box-sizing: border-box;
   }
   
+  /*체크박스*/
   #comment #cookie {
     width:100%;
     font-size:15px;
@@ -462,6 +464,7 @@
     padding:20px 0;
   }
 
+  /*submit 버튼*/
   #comment button {
     padding:15px 25px;
     border:1px solid #000;
@@ -474,6 +477,7 @@
   #comment button:hover {
     color:#fff;
     background-color: #000;
+    cursor:pointer;
   }
 
   #comment button span {

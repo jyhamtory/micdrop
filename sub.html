@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>blog</title>
+
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/font.css" rel="stylesheet">
+
+  <link href="css/common_min1300.css" rel="stylesheet">
+  <link href="css/common_max1299.css" rel="stylesheet">
+  <link href="css/common_max767.css" rel="stylesheet">
+
+  <link href="css/sub_min1300.css" rel="stylesheet">
+  <link href="css/sub_max1299.css" rel="stylesheet">
+  <link href="css/sub_max767.css" rel="stylesheet">
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/db0e422e76.js" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      /*nav script*/
+      $(".menu_icon").click(function () {
+        $(".menu").slideDown();
+        $(".menu_icon").hide();
+        $(".close_icon").show();
+      });
+
+      $(".close_icon").click(function () {
+        $(".menu").slideUp();
+        $(".close_icon").hide();
+        $(".menu_icon").show();
+      });
+
+      $(window).resize(function () {
+        if (window.innerWidth >= 768) {
+          $(".menu").show();
+          $(".menu_icon").hide();
+          $(".close_icon").hide();
+        }
+      });
+
+      $(window).resize(function () {
+        if (window.innerWidth <= 767) {
+          $(".menu").hide();
+          $(".menu_icon").show();
+          $(".close_icon").hide();
+        }
+      });
+
+      /*하트 누르면 채워짐*/
+      $(".nonclick").click(function () {
+        $(".click").show();
+        $(".nonclick").hide();
+      });
+
+      $(".click").click(function () {
+        $(".nonclick").show();
+        $(".click").hide();
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <div id="header_box">
+        <div id="logo_box">
+          <a href="#"><img src="img/logo.png"></a>
+          <img src="img/icon/hamburger_menu.png" alt="menu" class="menu_icon">
+          <img src="img/icon/close_icon.png" alt="close" class="close_icon">
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">EVENT</a></li>
+            <li><a href="#" id="now">BLOG</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div id="main_wrap">
+        <div id="left">
+          <div id="photo">
+            <a href="#">
+              <img src="img/gallery_img6.jpg" alt="brand_img1" class="hover">
+              <img src="img/gallery_img5.jpg" alt="brand_img2" class="main">
+            </a>
+            <div class="content_box">
+              <p class="category"><a href="#">MUSIC</a></p>
+              <h3 class="title"><a href="#">sunset rock festival</a></h3>
+              <h5>by Lorem Ipsum | 21 August 2023</h5>
+              <p class="content"><a href="#">Lorem ipsum dolor sit amet, id duo diam scaevola, ad usu alienum rationibus
+                  philosophia,ad etiam corrumpit interpretaris eum. Tation mucius dolorem pro in, te tamquam molestie
+                  imperdiet cum. Sit quis ubique ei, in eum diceret probatus. Ut qui case verterem, simul perfecto
+                  qualisque mea ei. At sea utamur fuisset tibique ali quenean lor. loremispum dolresr bovum. Morbi
+                  tincidunt ornare massa eget egestas. In nisl nisi scelerisque eu ultrices. Scelerisque fermentum dui
+                  faucibus in. Egestas pretium aenean pharetra magna ac placerat.</a>
+              </p>
+            </div>
+            <div class="share">
+              <div class="tag_box">
+                <p><a href="#" class="tags">music</a></p>
+                <p><a href="#" class="tags">festival</a></p>
+                <p><a href="#" class="tags">rock</a></p>
+              </div>
+              <div class="share_box">
+                <span href="#" class="icon nonclick"><i class="fa-regular fa-heart"></i></span>
+                <span href="#" class="icon click"><i class="fa-solid fa-heart"></i></span>
+                <span href="#" class="icon"><i class="fa-regular fa-comment"></i></span>
+                <span href="#" class="icon"><i class="fa-regular fa-share-from-square"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="video">
+            <div class="video_box">
+              <video src="video/dance.mp4" controls></video>
+            </div>
+            <div class="content_box">
+              <p class="category"><a href="#">video</a></p>
+              <h3 class="title"><a href="#">best music videos of the week</a></h3>
+              <h5>by Lorem Ipsum | 21 August 2023</h5>
+              <p class="content">
+                <a href="#">
+                  Lorem ipsum dolor sit amet, id duo diam scaevola, ad usu alienum rationibus philosophia,ad etiam corrumpit interpretaris eum. Tation mucius dolorem pro in, te tamquam molestie imperdiet cum. Sit quis ubique ei, in eum diceret probatus. Ut qui case verterem, simul perfecto qualisque mea ei. At sea utamur fuisset tibique ali quenean lor. loremispum dolresr bovum.Morbi tincidunt ornare massa eget egestas. In nisl nisi scelerisque eu ultrices. Scelerisque fermentum dui faucibus in. <br><br>
+                  Egestas pretium aenean pharetra magna ac placerat. Lacus viverra vitae congue eu consequat ac felis donec et. Velit scelerisque in dictum non consectetur. Malesuada fames ac turpis egestas maecenas pharetra convallis. Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Faucibus in ornare quam viverra orci sagittis eu volutpat odio. Commodo ullamcorper a lacus vestibulum. Morbi quis commodo odio aenean.
+                </a>
+              </p>
+            </div>
+            <div class="share">
+              <p><a href="#" class="tags">video</a></p>
+              <div class="share_box">
+                <span href="#" class="icon nonclick"><i class="fa-regular fa-heart"></i></span>
+                <span href="#" class="icon click"><i class="fa-solid fa-heart"></i></span>
+                <span href="#" class="icon"><i class="fa-regular fa-comment"></i></span>
+                <span href="#" class="icon"><i class="fa-regular fa-share-from-square"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="gallery">
+            <div class="img_box">
+              <div class="gallery_img">
+                <a href="#"><img src="img/sub_gallery_1.jpg" alt="gallery1"></a>
+                <div class="hover">
+                  <a href="#" class="wish">
+                    <i class="fa-regular fa-heart"></i>
+                    <p>wish</p>
+                  </a>
+                  <a href="#" class="cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <p>cart</p>
+                  </a>
+                </div>
+              </div>
+              <div class="gallery_img">
+                <a href="#"><img src="img/sub_gallery_2.jpg" alt="gallery2"></a>
+                <div class="hover">
+                  <a href="#" class="wish">
+                    <i class="fa-regular fa-heart"></i>
+                    <p>wish</p>
+                  </a>
+                  <a href="#" class="cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <p>cart</p>
+                  </a>
+                </div>
+              </div>
+              <div class="gallery_img">
+                <a href="#"><img src="img/sub_gallery_3.jpg" alt="gallery3"></a>
+                <div class="hover">
+                  <a href="#" class="wish">
+                    <i class="fa-regular fa-heart"></i>
+                    <p>wish</p>
+                  </a>
+                  <a href="#" class="cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <p>cart</p>
+                  </a>
+                </div>
+              </div>
+              <div class="gallery_img">
+                <a href="#"><img src="img/sub_gallery_4.jpg" alt="gallery4"></a>
+                <div class="hover">
+                  <a href="#" class="wish">
+                    <i class="fa-regular fa-heart"></i>
+                    <p>wish</p>
+                  </a>
+                  <a href="#" class="cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <p>cart</p>
+                  </a>
+                </div>
+              </div>
+              <div class="gallery_img">
+                <a href="#"><img src="img/sub_gallery_5.jpg" alt="gallery5"></a>
+                <div class="hover">
+                  <a href="#" class="wish">
+                    <i class="fa-regular fa-heart"></i>
+                    <p>wish</p>
+                  </a>
+                  <a href="#" class="cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <p>cart</p>
+                  </a>
+                </div>
+              </div>
+              <div class="gallery_img">
+                <a href="#"><img src="img/sub_gallery_6.jpg" alt="gallery6"></a>
+                <div class="hover">
+                  <a href="#" class="wish">
+                    <i class="fa-regular fa-heart"></i>
+                    <p>wish</p>
+                  </a>
+                  <a href="#" class="cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <p>cart</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="content_box">
+              <p class="category"><a href="#">album</a></p>
+              <h3 class="title"><a href="#">NEW ALBUMS</a></h3>
+              <h5>by Lorem Ipsum | 21 August 2023</h5>
+              <p class="content">
+                <a href="#">Lorem ipsum dolor sit amet, id duo diam scaevola, ad usu alienum rationibus philosophia,ad etiam corrumpit interpretaris eum. Tation mucius dolorem pro in, te tamquam molestie imperdiet cum. Sit quis ubique ei, in eum diceret probatus. Ut qui case verterem, simul perfecto qualisque mea ei. At sea utamur fuisset tibique ali quenean lor. loremispum dolresr bovum. Morbi tincidunt ornare massa eget egestas. In nisl nisi scelerisque eu ultrices. Scelerisque fermentum dui faucibus in. Egestas pretium aenean pharetra magna ac placerat.</a>
+              </p>
+            </div>
+            <div class="share">
+              <p><a href="#" class="tags">album</a></p>
+              <div class="share_box">
+                <span href="#" class="icon nonclick"><i class="fa-regular fa-heart"></i></span>
+                <span href="#" class="icon click"><i class="fa-solid fa-heart"></i></span>
+                <span href="#" class="icon"><i class="fa-regular fa-comment"></i></span>
+                <span href="#" class="icon"><i class="fa-regular fa-share-from-square"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="prev_next">
+            <a href="#" id="prev">
+              <div class="icon_box">
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              <span>PREV POST</span>
+            </a>
+            <a href="#" id="next">
+              <span>NEXT POST</span>
+              <div class="icon_box">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+          <div id="comment">
+            <h3 class="title">LEAVE A COMMENT</h3>
+            <p>Your email address will not be published. Required fields are marked *</p>
+            <form>
+              <textarea id="comment" name="comment" placeholder="Your Comment *" cols="45" rows="6" maxlength="10000" required></textarea>
+              <div class="name">
+                <input type="text" id="name" name="name" placeholder="Your Name *" max-length="245" required>
+              </div>
+              <div class="email">
+                <input type="text" id="mail" name="mail" placeholder="Your E-mail *" max-length="100" required>
+              </div>
+              <div class="website">
+                <input type="text" id="website" name="website" placeholder="Website" max-length="2000">
+              </div>
+              <p id="cookie">
+                <input type="checkbox" id="comment_cookie" name="comment_cookie" value="yes">
+                <label for="comment_cookie">Save my name, email, and website in this browser for the next time I comment.</label>
+              </p>
+              <p class="submit_btn">
+                <button name="submit" type="submit" id="submit" value="POST COMMENT">
+                  <span>POST COMMENT</span>
+                </button>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div id="right">
+          <div id="profile">
+            <div id="profile_img">
+              <a href="#"></a>
+            </div>
+            <h3 class="left_title">we're micdrop</h3>
+            <p>main vocal</p>
+            <div class="social_box">
+              <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <div id="read_next">
+            <h3 class="left_title">read next</h3>
+            <div class="read_box">
+              <a href="#">
+                <img src="img/read_next_img1.jpg" alt="read_img1">
+                <span>ready for tonight</span>
+              </a>
+            </div>
+            <div class="read_box">
+              <a href="#">
+                <img src="img/read_next_img2.jpg" alt="read_img2">
+                <span>rock and pop</span>
+              </a>
+            </div>
+            <div class="read_box">
+              <a href="#">
+                <img src="img/read_next_img3.jpg" alt="read_img2">
+                <span>Live Music Venues</span>
+              </a>
+            </div>
+          </div>
+          <div id="tag">
+            <h3 class="left_title">tag</h3>
+            <div id="right_tag_box">
+              <a href="#" class="tags">album</a>
+              <a href="#" class="tags">artist</a>
+              <a href="#" class="tags">band</a>
+              <a href="#" class="tags">concert</a>
+              <a href="#" class="tags">clasic</a>
+              <a href="#" class="tags">dance</a>
+              <a href="#" class="tags">festival</a>
+              <a href="#" class="tags">live</a>
+              <a href="#" class="tags">music</a>
+              <a href="#" class="tags">news</a>
+              <a href="#" class="tags">performance</a>
+              <a href="#" class="tags">rock</a>
+              <a href="#" class="tags">rap/hiphop</a>
+              <a href="#" class="tags">video</a>
+            </div>
+          </div>
+          <div id="follow">
+            <h3 class="left_title">follow</h3>
+            <div class="follow_box">
+              <a href="#" class="icon"><i class="fa-brands fa-spotify"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-soundcloud"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-itunes-note"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footer_wrap">
+        <ul id="footer_menu">
+          <li><a href="#"><img src="img/icon/youtube_icon.png">youtube</a></li>
+          <li><a href="#"><img src="img/icon/instagram_icon.png">instagram</a></li>
+          <li><a href="#"><img src="img/icon/spotify_icon.png">spotify</a></li>
+          <li><a href="#"><img src="img/icon/soundcloud_icon.png">soundcloud</a></li>
+        </ul>
+      </div>
+    </footer>
+    </main>
+
+</body>
+
+</html>

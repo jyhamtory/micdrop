@@ -1,0 +1,909 @@
+@charset "utf-8";
+
+@media screen and (max-width:1299px) {
+
+  body {
+    background-color: #e7edfd;
+    font-family: 'Syne', sans-serif;
+    font-weight: 500;
+  }
+  
+  /*슬라이더*/
+  #slider {
+    width: 100%;
+    height: 900px;
+    margin: 0 auto;
+  }
+
+  #slider>#slider_box {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #slider_box>.slider_img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  #slider_box>.slider_img>img {
+    width: 100%;
+    height: 110%;
+    position: relative;
+  }
+
+  #slider_box>.slider_text {
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    font-family: 'Syne', sans-serif;
+  }
+
+  #slider_box>.slider_text>h3 {
+    font-size: 75px;
+    margin-top: 50px;
+    font-weight: 800;
+    color: #1e2646
+  }
+
+  /*배경 채워지는 버튼*/
+  .fill_btn {
+    display: inline-block;
+    border: 2px solid #1e2646;
+  }
+
+  .fill {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.4s ease-in-out;
+  }
+
+  #slider_box>.slider_text>.fill_btn {
+    position: relative;
+    top: 50px;
+  }
+
+  #slider_box>.slider_text>.fill_btn>.fill {
+    color: #1e2646;
+  }
+
+  #albums>.fill_btn {
+    position: absolute;
+    top: 95px;
+    right: 0;
+  }
+
+  #slider_box>.slider_text>.fill_btn>.fill:hover {
+    background-color: #1e2646;
+    color: #fff;
+  }
+
+  /*슬라이더 버튼*/
+  #slider_box>.side_left {
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+  }
+
+  #slider_box>.side_left:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  #slider_box>.side_left>img {
+    width: 50px;
+    height: 60px;
+    padding:0 0 30% 10%;
+  }
+
+  #slider_box>.side_right {
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: 0.3s ease-in-out;
+  }
+
+  #slider_box>.side_right:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  #slider_box>.side_right>img {
+    width: 50px;
+    height: 60px;
+    padding:0 10% 30% 0;
+  }
+
+
+  /*뮤직 플레이어*/
+  #music_player {
+    width: 100%;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 165px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 15px;
+  }
+
+  #music_player a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #1e2646;
+  }
+
+  #music_player p {
+    display: inline-block;
+  }
+
+  #music_player>#music_player_box {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #music_player_box>.album_img {
+    width: 120px;
+    height: 100%;
+    background-color: #1e2646;
+    overflow: hidden;
+  }
+
+  #music_player_box>.album_img>img {
+    width: 100%;
+    height: 150%;
+    opacity: 0.9;
+    position: relative;
+    bottom: 20px;
+  }
+
+  #music_player_box>.player {
+    width: 80%;
+    height: 100%;
+    background: #e7edfd;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  #music_player_box>.player>.album_name {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 5px 0 0 10px;
+  }
+
+  /*뮤직 플레이어 아이콘*/
+  .player>.player_icon_box {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .player_icon_box>.music_bar {
+    width: 53%;
+    min-width: 300px;
+    height: 3px;
+    margin-left: 10px;
+    background-color: #1e2646;
+    cursor: pointer;
+  }
+
+  .player_icon_box>.music_bar>.music_bar_value {
+    width: 70%;
+    height: 3px;
+    background-color: #2c8ce0;
+  }
+
+  .player_icon_box>.player_icon {
+    width: 15%;
+    height: 100%;
+    min-width: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 5%;
+  }
+
+  .player_icon_box>.player_icon>li>img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .player_icon_box>.player_icon>li>img:hover {
+    cursor: pointer;
+  }
+
+  .player_icon_box>.player_icon>li>.play {
+    width: 40px;
+    height: 40px;
+  }
+
+  .player_icon_box>.player_icon>li>.stop {
+    width: 40px;
+    height: 40px;
+    display: none;
+  }
+
+  /*뮤직 플레이어 볼륨*/
+  .player_icon_box>.volumn_box {
+    width: 20%;
+    height: 100%;
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+  }
+
+  .player_icon_box>.volumn_box>img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .player_icon_box>.volumn_box>img:hover {
+    cursor: pointer;
+  }
+
+  .player_icon_box>.volumn_box>.mute {
+    display: none;
+  }
+
+  .player_icon_box>.volumn_box>.volumn_bar {
+    width: 75%;
+    height: 3px;
+    margin-left: 15px;
+    background-color: #1e2646;
+    cursor: pointer;
+  }
+
+  .player_icon_box>.volumn_box>.volumn_bar>.volumn_bar_value {
+    width: 70%;
+    height: 3px;
+    background-color: #2c8ce0
+  }
+
+  /*노래 이름 & 시간*/
+  #music_player_box>.player>.player_bottom {
+    width:55%;
+    display:flex;
+    justify-content: space-between;
+  }
+  
+  #music_player_box>.player>.player_bottom>.song_name {
+    font-size: 16px;
+    margin: 0 0 0 1.5%;
+  }
+
+  #music_player_box>.player>.player_bottom>.song_time {
+    margin:0 3% 0 0;
+  }
+  
+  /*메인*/
+  main {
+    width: 100%;
+    height: auto;
+  }
+
+  /*앨범*/
+  .title {
+    font-size: 45px;
+    font-weight: 800;
+    padding-top: 120px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #1e2646;
+  }
+
+  #albums {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #albums>.fill_btn {
+    position: absolute;
+    top: 120px;
+    right: 0;
+  }
+
+  #albums>.fill_btn>.fill {
+    padding: 13px 20px;
+  }
+
+  #albums>.fill_btn>.fill::after {
+    position: absolute;
+    content: "";
+    width: 101%;
+    height: 43px;
+    top: 0;
+    left: 0;
+    background: #000;
+    transition: transform 0.6s;
+    transform: scaleX(0);
+    transform-origin: right;
+    z-index: -10;
+  }
+
+  #albums>.fill_btn>.fill:hover {
+    color: #fff;
+  }
+
+  #albums>.fill_btn>.fill:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    color: #000;
+  }
+
+  /*앨범 박스*/
+  #albums>.album_wrap {
+    width:100%;
+    height:100%;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  #albums>.album_wrap>.album_box {
+    width: 40%;
+    height: auto;
+    margin: 0 0px 10% 0;
+    box-sizing: border-box;
+  }
+
+  #albums>.album_wrap>.album_box:nth-of-type(3n+2) {
+    position: relative;
+    bottom: 0px;
+  }
+
+  /*앨범 이미지*/
+
+  .album_box>.album_img_box {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #23a6d5;
+  }
+
+  .album_box>.album_img_box>img {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .album_box>.album_img_box>.img_v {
+    position:absolute;
+    top:-15%;
+    left:0;
+    width: 100%;
+    height: 150%;
+  }
+
+  /*이펙트*/
+  .album_box>.album_img_box>.hover_box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+
+    /*그라데이션*/
+    background: linear-gradient(135deg, #000000, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 20s ease infinite;
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
+    mix-blend-mode: lighten;
+  }
+
+  .album_box>.album_img_box:hover>.hover_box {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .album_box>.album_img_box>a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 100%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .album_box>.album_title {
+    font-size: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 20px 0 7px 0;
+  }
+
+  .album_box>.album_title>a {
+    text-decoration: none;
+    color: #000;
+    transition: 0.5s;
+  }
+
+  .album_box>.album_title>a:hover {
+    color: #263574;
+  }
+
+  .album_box>.stream_box {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .album_box>.stream_box>.stream_on {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #000;
+  }
+
+  /*sream on 아이콘*/
+  .stream_box>.stream_icon_box {
+    width: 68%;
+    height: 18px;
+    display: flex;
+  }
+
+  .stream_box>.stream_icon_box>a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .stream_box>.stream_icon_box>a>img {
+    width: 15px;
+    height: 14px;
+    margin-right: 22px;
+    transition: all 0.3s ease-out;
+  }
+
+  .stream_box>.stream_icon_box>a>img:hover {
+    transform: scale(1.2);
+  }
+
+  /*NEW ALBUM*/
+
+  #new_album {
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    background: url("../img/new_album_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 40%;
+    background-attachment: fixed;
+  }
+
+  #new_album>#new_album_box {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  /*NEW ALBUM 레코드 이미지*/
+
+  #new_album_box>#record {
+    width: 400px;
+    height: 66.6%;
+    position: relative;
+  }
+
+  #record>.record_cover_box {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50px;
+    overflow: hidden;
+    background-color: plum;
+    z-index: 3;
+  }
+
+  #record>.record_cover_box>.record_cover_img {
+    width: 100%;
+    height: 150%;
+    position: relative;
+    bottom: 80px;
+  }
+
+  #record>.record_box {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 2;
+  }
+
+  #record>.record_box>.record_img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: rotate_image 6s linear infinite;
+    transform-origin: 50% 50%;
+    transition: 0.5s;
+  }
+
+  #record>.record_box>.record_img:hover {
+    margin-left: 50px;
+  }
+
+  @keyframes rotate_image {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*New Album 텍스트*/
+  #new_album_box>#new_album_text {
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+  }
+
+  #new_album_box>#new_album_text>.title {
+    font-size: 27px;
+    border-bottom: none;
+    padding-top: 0;
+  }
+
+  #new_album_box>#new_album_text>p {
+    font-size: 13px;
+    position: relative;
+    bottom: 0px;
+  }
+
+  #new_album_box>#new_album_text>.btn_box {
+    width: 64%;
+    min-width: 250px;
+    height: 40%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-content: space-around;
+  }
+
+  #new_album_box>#new_album_text>.btn_box>.fill_btn>.fill {
+    padding: 15px 20px;
+  }
+
+  #new_album_box>#new_album_text>.btn_box>.fill_btn>.fill:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  #new_album_box>#new_album_text>.btn_box>.fill_btn>.buy {
+    background-color: #000;
+    color: #fff;
+  }
+
+  #new_album_box>#new_album_text>.btn_box>.fill_btn>.buy:hover {
+    background: none;
+    color: #000;
+  }
+
+
+  /*뉴스*/
+  #news {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #news>#news_wrap {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /*뉴스 박스*/
+  #news>#news_wrap>.news_box {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .news_box>.news_text {
+    width: 40%;
+    min-height: 280px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+
+  .news_box>.news_text>.news_tag {
+    padding-bottom: 10px;
+  }
+
+  .news_box>.news_text>.news_title {
+    font-weight: 800;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+  }
+
+  .news_box>.news_text>.news_content {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 26px;
+  }
+
+  .news_box>.news_imgbox {
+    width: 55%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .news_box>.news_imgbox>a>.news_img {
+    width: 100%;
+    height: auto;
+    transition: 0.5s;
+  }
+
+  .news_box>.news_imgbox:hover>a>.news_img {
+    filter: grayscale(100%);
+  }
+
+
+  /*뉴스 박스_리버스*/
+  #news>#news_wrap>.reverse {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .reverse>.news_imgbox>a>.news_img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .reverse>.news_text>.fill_btn {
+    width: 165px;
+    margin-top: 30px;
+  }
+
+  .reverse>.news_text>.fill_btn>.fill:hover {
+    background: #000;
+    color: white;
+  }
+
+
+  /*갤러리*/
+
+  #gallery {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #gallery>#gallery_wrap {
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  #gallery_wrap>.video_box {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+  }
+
+  #gallery_wrap>.video_box>video {
+    width: 100%;
+    height: 100%;
+  }
+
+  #gallery_wrap>.imgbox {
+    width: 50%;
+    height: 0;
+    padding-bottom: 50%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #gallery_wrap>.imgbox>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+
+  #gallery_wrap>.imgbox:hover>img {
+    filter: grayscale(100%);
+    transform: scale(1.1);
+  }
+
+  #gallery_wrap>.imgbox>.img_h {
+    width: 125%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #gallery_wrap>.imgbox>.img_v {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+  }
+
+  #gallery_wrap>.imgbox>.hover_box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%);
+    content: '';
+    opacity: 0;
+    transition: opacity 0.8s
+  }
+
+  #gallery_wrap>.imgbox:hover>.hover_box {
+    opacity: 1;
+  }
+
+  #gallery_wrap>.imgbox>.hover_box a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #gallery_wrap>.imgbox>.hover_box img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /*투어*/
+
+  #tour {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #tour>#tour_wrap {
+    width: 100%;
+    height: auto;
+    padding-bottom:80px;
+    margin: 0 auto;
+  }
+
+  /*투어 테이블*/
+
+  #tour_table {
+    width: 100%;
+    margin: 30px 0;
+    height: auto;
+  }
+
+  #tour_table .row {
+    line-height: 80px;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 1px solid #000;
+    display:flex;
+  }
+
+  #tour_table .row:first-child {
+    border-top: 1px solid #000;
+  }
+
+  #tour_table span {
+    display:inline-block;
+  }
+
+  #tour_table .date{
+    width: 18%;
+    font-weight: 700;
+  }
+
+  #tour_table .day {
+    font-size: 32px;
+    margin-right: 15px;
+    font-weight: 800;
+  }
+
+  #tour_table .tour_name {
+    width: 25%;
+  }
+
+  #tour_table .place{
+    width:30%;
+  }
+
+  #tour_table .buy_tickets,.canceled,.sold{
+    width:27%;
+    text-align: right;
+  }
+
+  #tour_table .fill_btn {
+    line-height: 45px;
+  }
+
+  #tour_table .fill {
+    line-height: 45px;
+    display: inline-block;
+    padding: 0 25px;
+  }
+
+  #tour_table .fill:hover {
+    background: black;
+    color: #fff;
+  }
+
+  #tour_table .canceled {
+    font-weight: 700;
+    color: #263574;
+    text-decoration: line-through;
+  }
+
+  #tour_table .sold {
+    font-weight: 700;
+    color: #1e2646;
+  }
+}

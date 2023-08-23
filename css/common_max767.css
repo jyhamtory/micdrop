@@ -62,7 +62,7 @@
   }
 
   nav ul{
-    display: flex;
+    display: block;
     flex-direction: column;
     font-weight: 600;
   }

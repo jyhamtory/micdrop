@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+  <title>Micdrop:blog</title>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>blog</title>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/db0e422e76.js" crossorigin="anonymous"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/heart.js"></script>
 
   <link href="css/reset.css" rel="stylesheet">
   <link href="css/font.css" rel="stylesheet">
@@ -16,54 +21,6 @@
   <link href="css/sub_min1300.css" rel="stylesheet">
   <link href="css/sub_max1299.css" rel="stylesheet">
   <link href="css/sub_max767.css" rel="stylesheet">
-
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
-  <script src="https://kit.fontawesome.com/db0e422e76.js" crossorigin="anonymous"></script>
-
-  <script>
-    $(document).ready(function () {
-      /*nav script*/
-      $(".menu_icon").click(function () {
-        $(".menu").slideDown();
-        $(".menu_icon").hide();
-        $(".close_icon").show();
-      });
-
-      $(".close_icon").click(function () {
-        $(".menu").slideUp();
-        $(".close_icon").hide();
-        $(".menu_icon").show();
-      });
-
-      $(window).resize(function () {
-        if (window.innerWidth >= 768) {
-          $(".menu").show();
-          $(".menu_icon").hide();
-          $(".close_icon").hide();
-        }
-      });
-
-      $(window).resize(function () {
-        if (window.innerWidth <= 767) {
-          $(".menu").hide();
-          $(".menu_icon").show();
-          $(".close_icon").hide();
-        }
-      });
-
-      /*하트 누르면 채워짐*/
-      $(".nonclick").click(function () {
-        $(".click").show();
-        $(".nonclick").hide();
-      });
-
-      $(".click").click(function () {
-        $(".nonclick").show();
-        $(".click").hide();
-      });
-    });
-  </script>
-
 </head>
 
 <body>
@@ -79,9 +36,10 @@
         <nav class="menu">
           <ul>
             <li><a href="index.html">HOME</a></li>
-            <li><a href="#">SHOP</a></li>
-            <li><a href="#">EVENT</a></li>
-            <li><a href="#" id="now">BLOG</a></li>
+            <li><a href="sub.html">PAGES</a></li>
+            <li><a href="sub.html">EVENT</a></li>
+            <li><a href="sub.html">SHOP</a></li>
+            <li><a href="sub.html" id="now">BLOG</a></li>
           </ul>
         </nav>
       </div>

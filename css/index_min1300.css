@@ -755,8 +755,6 @@
 
   #gallery_wrap .imgbox img {
     position: absolute;
-    top: 0;
-    left: 0;
     object-fit: cover;
     transition: 0.5s;
   }
